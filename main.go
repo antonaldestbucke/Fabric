@@ -13,6 +13,11 @@ import (
 //
 // Personal fork: using this for local AI workflow automation and learning
 // how Go CLI apps are structured. -- @myfork
+//
+// Notes to self:
+//   - patterns live in ~/.config/fabric/patterns/
+//   - run `fabric --list` to see available patterns
+//   - `fabric --update` pulls latest patterns from upstream
 func main() {
 	if err := cli.Execute(); err != nil {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
