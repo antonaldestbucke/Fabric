@@ -18,6 +18,8 @@ import (
 //   - patterns live in ~/.config/fabric/patterns/
 //   - run `fabric --list` to see available patterns
 //   - `fabric --update` pulls latest patterns from upstream
+//   - exit code 1 on error; stderr used for error output (not stdout)
+//   - TODO: explore adding a --dry-run flag to preview pattern output
 func main() {
 	if err := cli.Execute(); err != nil {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
