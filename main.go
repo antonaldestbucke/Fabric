@@ -10,6 +10,9 @@ import (
 // main is the entry point for the Fabric CLI application.
 // Fabric is an open-source AI augmentation framework designed to help
 // humans apply AI to everyday tasks using a crowdsourced set of patterns.
+//
+// Personal fork: using this for local AI workflow automation and learning
+// how Go CLI apps are structured. -- @myfork
 func main() {
 	if err := cli.Execute(); err != nil {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
