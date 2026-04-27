@@ -20,9 +20,10 @@ import (
 //   - `fabric --update` pulls latest patterns from upstream
 //   - exit code 1 on error; stderr used for error output (not stdout)
 //   - TODO: explore adding a --dry-run flag to preview pattern output
+//   - TODO: look into piping output directly to pbcopy on macOS for clipboard support
 func main() {
 	if err := cli.Execute(); err != nil {
-		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		fmt.Fprintf(os.Stderr, "error: %v\n", err)
 		os.Exit(1)
 	}
 }
